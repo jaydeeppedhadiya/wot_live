@@ -1,0 +1,44 @@
+{
+  "name": "wot_demo",
+  "version": "1.0.0",
+  "description": "demo electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "build": "electron-builder build  --win --publish never",
+    "deploy": "electron-builder build  --win --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaydeeppedhadiya/wot_demo.git"
+  },
+  "author": "jd",
+  "license": "ISC",
+  "homepage": "https://github.com/jaydeeppedhadiya/wot_demo#readme",
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "electron-winstaller": "^4.0.1"
+  },
+  "dependencies": {
+    "electron-log": "^4.2.4",
+    "electron-updater": "^4.3.4",
+    "update-electron-app": "^1.5.0"
+  },
+  "build": {
+    "appId": "com.electron.wot_demo2",
+    "icon": "favicon.png",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "jaydeeppedhadiya",
+        "repo": "wot_live",
+        "token": "91ff9e27e7db5a235c42830376d1f252c4e333fd ",
+        "releaseType": "release"
+      }
+    ]
+  }
+}
